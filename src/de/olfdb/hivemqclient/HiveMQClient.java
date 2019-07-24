@@ -4,8 +4,8 @@ import java.util.UUID;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 
-import com.hivemq.client.mqtt.mqtt5.Mqtt5AsyncClient;
-import com.hivemq.client.mqtt.mqtt5.Mqtt5Client;
+import com.hivemq.client.mqtt.mqtt3.Mqtt3AsyncClient;
+import com.hivemq.client.mqtt.mqtt3.Mqtt3Client;
 
 public class HiveMQClient {
 
@@ -30,7 +30,7 @@ public class HiveMQClient {
             me.compressed = args[2].equals("-c") ? true : false;
         }
 
-        final Mqtt5AsyncClient client = Mqtt5Client.builder().identifier(UUID.randomUUID().toString())
+        final Mqtt3AsyncClient client = Mqtt3Client.builder().identifier(UUID.randomUUID().toString())
                 .serverHost(me.server).buildAsync();
 
         while (true) {
