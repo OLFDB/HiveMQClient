@@ -73,7 +73,7 @@ public class HiveMQClient {
                     });
                 }
             } catch (Exception e) {
-
+e.printStackTrace();
             }
 
             try {
